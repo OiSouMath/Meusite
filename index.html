@@ -1,214 +1,144 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Redirecionamento para o canal do YouTube OiSouMathh, preços dos serviços e servidor do Discord">
-    <meta name="author" content="Matheus">
-    <title>VISITE O CANAL - OISOUMATHH | SERVIÇOS</title>
+    <title>Confirmar Pedido - Montagem de PC</title>
     <style>
-        /* Fonte cartoon */
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
+        /* Estilo Dark Clean */
         body {
-            font-family: 'Press Start 2P', cursive; /* Fonte cartoon */
-            text-transform: uppercase; /* Tudo em maiúsculas */
-            background: linear-gradient(135deg, #4e1f83, #9b4dff); /* Gradiente roxo com efeito luminoso */
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #f1f1f1;
+            text-align: center;
             margin: 0;
-            overflow: hidden;
-            box-sizing: border-box;
+            padding: 20px;
         }
 
-        h1 {
-            font-size: 40px;
-            color: #ffeb3b; /* Amarelo vibrante para destacar */
-            margin-bottom: 20px;
-            text-shadow: 0 0 20px rgba(255, 235, 59, 0.8); /* Efeito de brilho amarelo */
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #333;
+            border: 2px solid #333;
         }
 
         button {
-            font-size: 22px;
-            background-color: #ffeb3b; /* Amarelo vibrante */
-            color: #000;
-            border: none;
-            padding: 20px 40px;
-            border-radius: 10px;
+            background: #4CAF50;
+            color: white;
+            padding: 12px;
+            font-size: 18px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 0 15px rgba(255, 235, 59, 0.8); /* Brilho amarelo */
+            transition: 0.3s;
+            width: 100%;
         }
 
         button:hover {
-            background-color: #ff9800; /* Amarelo laranja mais escuro */
-            transform: scale(1.1); /* Efeito de ampliação */
+            background: #45a049;
         }
 
-        .youtube-logo, .discord-logo {
-            width: 120px;
-            height: auto;
-            margin-bottom: 20px;
-            cursor: pointer;
+        .informacoes {
+            font-size: 18px;
+            margin-top: 20px;
         }
 
-        table {
-            width: 80%;
-            margin-top: 30px;
-            border-collapse: collapse;
-            background-color: #1c1c1c;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 235, 59, 0.8); /* Brilho amarelo */
+        .informacoes h3 {
+            color: #ff9800;
         }
 
-        th, td {
-            padding: 15px;
-            text-align: center;
-            color: #ffffff;
-            border-bottom: 1px solid #ffeb3b;
+        .informacoes p {
+            margin: 10px 0;
         }
 
-        th {
-            background-color: #4caf50; /* Verde para cabeçalho */
-            font-size: 24px;
-        }
-
-        td {
+        .pix-info {
+            margin-top: 20px;
             background-color: #333;
-            font-size: 18px;
-        }
-
-        #pix-box {
-            display: none;
-            background-color: #1c1c1c;
-            color: #ffeb3b;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            box-shadow: 0 0 15px rgba(255, 235, 59, 0.8);
-            margin-top: 20px;
-            font-size: 22px;
-            text-align: center;
-            width: 300px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: slideIn 1s forwards; /* Animação de deslizamento */
         }
 
-        @keyframes slideIn {
-            0% {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        footer {
-            position: absolute;
-            bottom: 10px;
-            color: #ffeb3b;
-            font-size: 14px;
-            text-shadow: 0 0 5px rgba(255, 235, 59, 0.8); /* Efeito de brilho */
-        }
-
-        .discord-section {
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        .discord-button {
-            font-size: 22px;
-            background-color: #7289DA; /* Cor padrão do Discord */
-            color: #fff;
-            border: none;
-            padding: 15px 40px;
-            border-radius: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6); /* Sombra sutil */
-        }
-
-        .discord-button:hover {
-            background-color: #5b6eae; /* Tom mais escuro */
-            transform: scale(1.05); /* Efeito de ampliação */
-        }
-
-        .discord-message {
-            color: #ff0000; /* Vermelho */
+        .pix-info p {
             font-size: 18px;
+            color: #f1f1f1;
+        }
+
+        .pix-info h4 {
+            color: #ff9800;
+        }
+
+        .precos {
             margin-top: 20px;
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .precos h4 {
+            color: #ff9800;
+        }
+
+        .precos p {
+            font-size: 18px;
+            color: #f1f1f1;
+        }
+
+        .whatsapp-info {
+            margin-top: 20px;
+            background-color: #25d366;
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .whatsapp-info a {
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .whatsapp-info a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
+<script type="text/javascript">
+      window.onload = function(){
+      (function(d, script) {
+      script = d.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.src = 'https://w.app/widget-v1/qylXHu.js';
+      d.getElementsByTagName('head')[0].appendChild(script);
+      }(document));
+      };
+      </script>
 <body>
 
-    <!-- Logo do YouTube com link -->
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png" alt="YouTube Logo" class="youtube-logo">
-    </a>
+    <div class="container">
+        <h2>🎮 Confirmar Pedido de Montagem de PC 🎮</h2>
 
-    <h1>CLIQUE PARA VISITAR O CANAL</h1>
-    <button onclick="window.location.href='https://YouTube.com/@OiSouMathh'">Ir para o Canal</button>
+        <div class="informacoes">
+            <h3>🖥️ Pedido Confirmado</h3>
+            <p>Você escolheu a montagem de um PC de acordo com as especificações fornecidas.</p>
+            <p>Agora, para concluir a compra, por favor, faça o pagamento via Pix.</p>
+        </div>
 
-    <!-- Tabela de Preços -->
-    <h1>PREÇOS DOS SERVIÇOS</h1>
-    <table>
-        <tr>
-            <th>Serviço</th>
-            <th>Preço</th>
-            <th>Ação</th>
-        </tr>
-        <tr>
-            <td>Banner para YouTube</td>
-            <td>R$ 20,00</td>
-            <td><button onclick="mostrarPIX()">Comprar</button></td>
-        </tr>
-        <tr>
-            <td>Perfil para YouTube</td>
-            <td>R$ 10,00</td>
-            <td><button onclick="mostrarPIX()">Comprar</button></td>
-        </tr>
-        <tr>
-            <td>Thumbnail para YouTube</td>
-            <td>R$ 15,00</td>
-            <td><button onclick="mostrarPIX()">Comprar</button></td>
-        </tr>
-    </table>
+        <div class="precos">
+            <h4>💰 Preços de Montagem de PC</h4>
+            <p><strong>Montagem Básica:</strong> R$ 200,00</p>
+            <p><strong>Montagem Completa (incluindo instalação de sistema operacional):</strong> R$ 300,00</p>
+            <p><em>Os preços podem variar conforme a complexidade e os componentes escolhidos.</em></p>
+        </div>
 
-    <!-- Caixa de PIX -->
-    <div id="pix-box">
-        <p>Para realizar o pagamento, ultilize o PIX:</p>
-        <p><strong>50961818808</strong></p>
-    </div>
+        <div class="pix-info">
+            <h4>📲 Chave Pix:</h4>
+            <p><strong>7451bc8d-2ed7-431a-a018-d3680be1fcf0</strong></p>
+            <h4>📍 Local para Entregar o Computador sera falado na conversa pelo whatsapp:</h4>
+            <p>Após o pagamento, entre em contato para agendar a entrega ou retirada.</p>
+        <script>
 
-    <!-- Seção do Discord -->
-    <div class="discord-section">
-        <h1>Junte-se ao meu servidor no Discord!</h1
-            <img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-0-768x768.png" alt="Discord Logo" class="discord-logo">
-        </a>
-        <br>
-        <button class="discord-button" onclick="window.location.href='https://discord.gg/MhjtV8rMZF'">Entrar no Servidor</button>
-        
-        <!-- Mensagem em vermelho -->
-        <p class="discord-message">Após a compra porfavor entrar no servidor e abrir um ticket para que eu consiga entregar seu pedido!</p>
-    </div>
-
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2025 - Criado por Matheus</p>
-    </footer>
-
-    <script>
-        function mostrarPIX() {
-            // Exibe a caixa com o número do PIX com animação
-            document.getElementById('pix-box').style.display = 'block';
-        }
-    </script>
 
 </body>
 </html>
