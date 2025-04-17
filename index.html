@@ -4,20 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Valdheim - Servidor Nórdico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
       background-color: #1c1c1c;
       color: #f0f0f0;
-      font-family: 'Georgia', serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
       text-align: center;
     }
 
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #111;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      z-index: 100;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+    }
+
     .serpent {
       width: 160px;
       border-radius: 8px;
-      margin-top: 20px;
+      margin-top: 80px;
     }
 
     h1 {
@@ -25,6 +44,7 @@
       margin: 10px 0;
       color: #fff;
       text-shadow: 2px 2px 5px #000;
+      animation: fadeIn 1s ease-in-out;
     }
 
     p.slogan {
@@ -32,6 +52,15 @@
       margin-top: -10px;
       color: #ccc;
       text-shadow: 1px 1px 3px #000;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
     .btn-discord {
@@ -46,6 +75,12 @@
       box-shadow: 2px 2px 5px #000;
       text-decoration: none;
       display: inline-block;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .btn-discord:hover {
+      background: linear-gradient(to left, #3a4bd6, #5c6aff);
+      transform: scale(1.05);
     }
 
     .box {
@@ -80,6 +115,18 @@
       text-shadow: 1px 1px 3px #000;
     }
 
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 5px;
+      background-color: #333;
+      margin: 5px 0;
+      border-radius: 5px;
+    }
+
     a {
       color: #9fc9ff;
       text-decoration: none;
@@ -88,13 +135,46 @@
     a:hover {
       text-decoration: underline;
     }
+
+    @media (max-width: 768px) {
+      .serpent {
+        width: 120px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .btn-discord {
+        font-size: 16px;
+        padding: 10px 20px;
+      }
+
+      .section {
+        padding: 15px;
+        max-width: 90%;
+      }
+    }
+
+    footer {
+      background-color: #111;
+      color: #fff;
+      padding: 10px 0;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
+  <header>
+    <h1>Valdheim</h1>
+  </header>
+
   <img src="https://i.imgur.com/6fGU7Fm.png" alt="Serpente Nórdica" class="serpent" />
 
-  <h1>Valdheim</h1>
   <p class="slogan">Forjado pelo gelo, moldado pela fúria dos deuses</p>
 
   <a href="https://discord.gg/BrFBxSAtnu" class="btn-discord">Entrar no Discord</a>
@@ -110,6 +190,19 @@
       Valdheim é um servidor de Minecraft com alma nórdica, criado para aqueles que buscam uma jornada única. Aqui, guerreiros, magos e caçadores cruzarão reinos cobertos por neblinas, criaturas míticas e lendas esquecidas. O servidor ainda está em construção, mas cada runa está sendo gravada com dedicação e paixão.
     </p>
   </div>
+
+  <div class="section">
+    <h2>Atualizações Recentes</h2>
+    <p>O servidor Valdheim está em construção. Aqui estão algumas das novidades:</p>
+    <ul>
+      <li><strong>Abril 16/04:</strong> Estamos Adicionando Segurança e Login , Tambem Colocamos Cargos no Servidor.</li>
+      <li><strong>Abril 17/04:</strong> Estamos Trabalhando Duro Para Trazer Mais Atualizações , Estamos Incrementando Um ScoreBoard e Plugins de Economia!</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Valdheim - Todos os direitos reservados.</p>
+  </footer>
 
 </body>
 </html>
