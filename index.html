@@ -1,147 +1,115 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmar Pedido - Montagem de PC</title>
-    <style>
-        /* Estilo Dark Clean */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #121212;
-            color: #f1f1f1;
-            text-align: center;
-            margin: 0;
-            padding: 20px;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valdheim - Servidor Nórdico</title>
+  <style>
+    body {
+      background-color: #1c1c1c;
+      color: #f0f0f0;
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
 
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: #1a1a1a;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 15px #333;
-            border: 2px solid #333;
-        }
+    .serpent {
+      width: 160px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
 
-        button {
-            background: #4CAF50;
-            color: white;
-            padding: 12px;
-            font-size: 18px;
-            cursor: pointer;
-            transition: 0.3s;
-            width: 100%;
-        }
+    h1 {
+      font-size: 48px;
+      margin: 10px 0;
+      color: #fff;
+      text-shadow: 2px 2px 5px #000;
+    }
 
-        button:hover {
-            background: #45a049;
-        }
+    p.slogan {
+      font-size: 18px;
+      margin-top: -10px;
+      color: #ccc;
+      text-shadow: 1px 1px 3px #000;
+    }
 
-        .informacoes {
-            font-size: 18px;
-            margin-top: 20px;
-        }
+    .btn-discord {
+      background: linear-gradient(to right, #3a4bd6, #5c6aff);
+      color: #fff;
+      font-size: 18px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 10px;
+      margin: 30px auto;
+      cursor: pointer;
+      box-shadow: 2px 2px 5px #000;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-        .informacoes h3 {
-            color: #ff9800;
-        }
+    .box {
+      background-color: #111;
+      margin: 20px auto;
+      padding: 15px;
+      max-width: 500px;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px #000;
+    }
 
-        .informacoes p {
-            margin: 10px 0;
-        }
+    .section {
+      padding: 20px;
+      background-color: #2a2a2a;
+      border-radius: 10px;
+      margin: 20px auto;
+      max-width: 800px;
+      text-align: left;
+    }
 
-        .pix-info {
-            margin-top: 20px;
-            background-color: #333;
-            padding: 15px;
-            border-radius: 10px;
-        }
+    h2 {
+      font-size: 28px;
+      color: #fff;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 5px #000;
+    }
 
-        .pix-info p {
-            font-size: 18px;
-            color: #f1f1f1;
-        }
+    p {
+      font-size: 16px;
+      color: #ddd;
+      line-height: 1.6;
+      text-shadow: 1px 1px 3px #000;
+    }
 
-        .pix-info h4 {
-            color: #ff9800;
-        }
+    a {
+      color: #9fc9ff;
+      text-decoration: none;
+    }
 
-        .precos {
-            margin-top: 20px;
-            background-color: #333;
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        .precos h4 {
-            color: #ff9800;
-        }
-
-        .precos p {
-            font-size: 18px;
-            color: #f1f1f1;
-        }
-
-        .whatsapp-info {
-            margin-top: 20px;
-            background-color: #25d366;
-            padding: 15px;
-            border-radius: 10px;
-            color: white;
-        }
-
-        .whatsapp-info a {
-            color: white;
-            font-size: 18px;
-            text-decoration: none;
-        }
-
-        .whatsapp-info a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
-<script type="text/javascript">
-      window.onload = function(){
-      (function(d, script) {
-      script = d.createElement('script');
-      script.type = 'text/javascript';
-      script.async = true;
-      script.src = 'https://w.app/widget-v1/qylXHu.js';
-      d.getElementsByTagName('head')[0].appendChild(script);
-      }(document));
-      };
-      </script>
 <body>
 
-    <div class="container">
-        <h2>🎮 Obrigado Por Escolher!🎮</h2>
+  <img src="https://i.imgur.com/6fGU7Fm.png" alt="Serpente Nórdica" class="serpent" />
 
-        <div class="informacoes">
-            <h3>🖥️ Para Que Possamos Dar Continuidade</h3>
-            <p>Clique No Icone do Whatsapp Para Entrar Em Contato Com o Técnico.</p>
-            <p>Ele Ira Fazer Algumas Perguntas Para Que Cheguem Em Um Valor Acessível 
-                ,Após o Pagamento Iremos Mandar o Local Para Entregar o Computador,
-                Estamos Localizados na Cidade de Itupeva !.</p>
-        </div>
+  <h1>Valdheim</h1>
+  <p class="slogan">Forjado pelo gelo, moldado pela fúria dos deuses</p>
 
-        <div class="precos">
-            <h4>💰 Preços de Montagem de PC</h4>
-            <p><strong>Montagem Básica:</strong> R$ 200,00 a 450,00</p>
-            <p><strong>Montagem Completa (incluindo instalação de sistema operacional):</strong> R$ 300,00 a 550,00</p>
-            <p><em>Os preços podem variar conforme a complexidade e os componentes escolhidos.</em></p>
-        </div>
+  <a href="https://discord.gg/BrFBxSAtnu" class="btn-discord">Entrar no Discord</a>
 
-        <div class="pix-info">
-            <h4>📲 Chave Pix:</h4>
-            <p><strong>7451bc8d-2ed7-431a-a018-d3680be1fcf0</strong></p>
-            <h4>📍 Local para Entregar o Computador sera falado na conversa pelo whatsapp:</h4>
-            <p>entre em contato para agendar a entrega ou retirada do computador.
-            valores serao passados de acordo com o que for pedido via whatsapp</p>
-        <script>
+  <div class="box">
+    <p><strong>Status do Servidor:</strong> Em construção...</p>
+    <p><strong>IP:</strong> Em breve</p>
+  </div>
 
+  <div class="section">
+    <h2>O que é Valdheim?</h2>
+    <p>
+      Valdheim é um servidor de Minecraft com alma nórdica, criado para aqueles que buscam uma jornada única. Aqui, guerreiros, magos e caçadores cruzarão reinos cobertos por neblinas, criaturas míticas e lendas esquecidas. O servidor ainda está em construção, mas cada runa está sendo gravada com dedicação e paixão.
+    </p>
+  </div>
 
 </body>
 </html>
